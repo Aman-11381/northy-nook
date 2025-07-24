@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NorthyNook Catering</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <span class="fs-4 fw-bold text-danger">Northy<span class="text-dark">Nook</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Contact Form Section -->
+        <section class="form-section py-5" style="padding: 5rem 0; position: relative;">
+            <!-- Background Image -->
+            <div class="position-absolute top-0 start-0 w-100 h-100" style="background: url('images/AK_05846.JPG') center center no-repeat; background-size: 100% auto; z-index: 0;"></div>
+            <!-- Background Overlay -->
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-25" style="z-index: 1;"></div>
+            <div class="container position-relative" style="z-index: 2;">
+                <div class="row align-items-center my-4">
+                    <div class="col-lg-6">
+                        <div class="card shadow-lg border-0 rounded-lg bg-dark bg-opacity-50 text-white backdrop-blur">
+                            <div class="card-header bg-theme bg-opacity-75 text-white text-center py-3">
+                                <h2 class="fw-bold mb-1">Request a Catering Quote</h2>
+                                <p class="mb-0">Fill in your details and we'll contact you within 24 hours</p>
+                            </div>
+                            <div class="card-body p-4">
+                                <form id="contactForm">
+                                    <!-- Name Field -->
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label fw-medium">Full Name <span class="text-theme">*</span></label>
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-light"><i class="fas fa-user"></i></span>
+                                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Phone Field -->
+                                    <div class="mb-3">
+                                        <label for="phone" class="form-label fw-medium">Phone Number <span class="text-theme">*</span></label>
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-light"><i class="fas fa-phone"></i></span>
+                                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="10-digit mobile number" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Email Field -->
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label fw-medium">Email Address</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-light"><i class="fas fa-envelope"></i></span>
+                                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address (optional)">
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Message Field -->
+                                    <div class="mb-3">
+                                        <label for="message" class="form-label fw-medium">Message or Special Requests</label>
+                                        <textarea class="form-control" id="message" name="message" rows="4" placeholder="Tell us about your event, preferences, or any questions you have... (optional)"></textarea>
+                                    </div>
+                                    
+                                    <!-- Submit Button -->
+                                    <div class="d-grid gap-2 mt-4">
+                                        <button type="submit" class="btn btn-danger py-2 fw-medium bg-opacity-85">Submit Request</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="card-footer py-3 text-center border-top border-secondary bg-dark bg-opacity-25">
+                                <p class="mb-0 text-light">Your information is secure and will not be shared with third parties.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-lg-6">
+                        <!-- Right side intentionally left empty -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Quick Links Column -->
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase text-theme fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="index.html" class="text-white text-decoration-none">
+                                <i class="fas fa-angle-right me-2 text-theme"></i>Home
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="menu.html" class="text-white text-decoration-none">
+                                <i class="fas fa-angle-right me-2 text-theme"></i>Menu
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="about.html" class="text-white text-decoration-none">
+                                <i class="fas fa-angle-right me-2 text-theme"></i>About Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info Column -->
+                <div class="col-md-6">
+                    <h5 class="text-uppercase text-theme fw-bold mb-4">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <i class="fas fa-envelope me-3 text-theme"></i>
+                            <a href="mailto:info@northynook.com" class="text-white text-decoration-none">info@northynook.com</a>
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-phone me-3 text-theme"></i>
+                            <a href="tel:+11234567890" class="text-white text-decoration-none">(123) 456-7890</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt me-3 text-theme"></i>
+                            <span>123 Catering St, Foodville, NY 10001</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="text-center mt-4 pt-3 border-top border-secondary">
+                <p class="mb-0">&copy; 2025 NorthyNook. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/form.js"></script>
+</body>
+</html>
