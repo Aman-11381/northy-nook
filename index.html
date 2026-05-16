@@ -31,6 +31,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About Us</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="get-quote.html">Get Quote</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -38,69 +41,25 @@
 
     <!-- Main Content -->
     <main>
-        <!-- Contact Form Section -->
-        <section class="form-section py-5" style="padding: 5rem 0; position: relative;">
+        <!-- Hero Section -->
+        <section class="hero-section position-relative d-flex align-items-center" style="min-height: 85vh;">
             <!-- Background Image -->
-            <div class="position-absolute top-0 start-0 w-100 h-100" style="background: url('images/AK_05846.JPG') center center no-repeat; background-size: 100% auto; z-index: 0;"></div>
+            <div class="position-absolute top-0 start-0 w-100 h-100" style="background: url('images/AK_05846.JPG') center center no-repeat; background-size: cover; z-index: 0;"></div>
             <!-- Background Overlay -->
-            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-25" style="z-index: 1;"></div>
+            <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%); z-index: 1;"></div>
             <div class="container position-relative" style="z-index: 2;">
-                <div class="row align-items-center my-4">
-                    <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
-                        <div class="card shadow-lg border-0 rounded-lg bg-dark bg-opacity-50 text-white backdrop-blur hover-lift">
-                            <div class="card-header bg-theme bg-opacity-75 text-white text-center py-3">
-                                <h2 class="fw-bold mb-1 fade-in">Request a Catering Quote</h2>
-                                <p class="mb-0 slide-up">Fill in your details and we'll contact you within 24 hours</p>
-                            </div>
-                            <div class="card-body p-4">
-                                <form id="contactForm">
-                                    <!-- Name Field -->
-                                    <div class="mb-3">
-                                        <label for="name" class="form-label fw-medium">Full Name <span class="text-theme">*</span></label>
-                                        <div class="input-group">
-                                            <span class="input-group-text bg-light"><i class="fas fa-user"></i></span>
-                                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Phone Field -->
-                                    <div class="mb-3">
-                                        <label for="phone" class="form-label fw-medium">Phone Number <span class="text-theme">*</span></label>
-                                        <div class="input-group">
-                                            <span class="input-group-text bg-light"><i class="fas fa-phone"></i></span>
-                                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="10-digit mobile number" required>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Email Field -->
-                                    <div class="mb-3">
-                                        <label for="email" class="form-label fw-medium">Email Address</label>
-                                        <div class="input-group">
-                                            <span class="input-group-text bg-light"><i class="fas fa-envelope"></i></span>
-                                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address (optional)">
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- Message Field -->
-                                    <div class="mb-3">
-                                        <label for="message" class="form-label fw-medium">Message or Special Requests</label>
-                                        <textarea class="form-control" id="message" name="message" rows="4" placeholder="Tell us about your event, preferences, or any questions you have... (optional)"></textarea>
-                                    </div>
-                                    
-                                    <!-- Submit Button -->
-                                    <div class="d-grid gap-2 mt-4" data-aos="fade-up" data-aos-delay="300">
-                                        <button type="submit" class="btn btn-danger py-2 fw-medium bg-opacity-85">Submit Request</button>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="card-footer py-3 text-center border-top border-secondary bg-dark bg-opacity-25">
-                                <p class="mb-0 text-light">Your information is secure and will not be shared with third parties.</p>
-                            </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-8 col-xl-7" data-aos="fade-right" data-aos-duration="1000">
+                        <h1 class="display-3 fw-bold text-white mb-3 fade-in">Authentic North Indian Catering</h1>
+                        <p class="fs-5 text-white mb-4 slide-up" style="opacity: 0.9;">From intimate gatherings to grand celebrations — we bring unforgettable flavors to your special events.</p>
+                        <div class="d-flex flex-wrap gap-3" data-aos="fade-up" data-aos-delay="300">
+                            <a href="get-quote.html" class="btn btn-danger btn-lg px-4 py-3 fw-semibold hover-grow">
+                                <i class="fas fa-file-alt me-2"></i>Get a Quote
+                            </a>
+                            <a href="menu.html" class="btn btn-outline-light btn-lg px-4 py-3 fw-semibold hover-grow">
+                                <i class="fas fa-utensils me-2"></i>View Menu
+                            </a>
                         </div>
-                    </div>
-                </div>
-                    <div class="col-lg-6">
-                        <!-- Right side intentionally left empty -->
                     </div>
                 </div>
             </div>
@@ -128,6 +87,11 @@
                         <li class="mb-2">
                             <a href="about.html" class="text-white text-decoration-none">
                                 <i class="fas fa-angle-right me-2 text-theme"></i>About Us
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="get-quote.html" class="text-white text-decoration-none">
+                                <i class="fas fa-angle-right me-2 text-theme"></i>Get Quote
                             </a>
                         </li>
                     </ul>
@@ -163,7 +127,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/form.js"></script>
     
     <script>
         // Initialize AOS animation library

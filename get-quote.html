@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request a Quote - NorthyNook Catering</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <span class="fs-4 fw-bold text-danger">Northy<span class="text-dark">Nook</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="get-quote.html">Get Quote</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section class="py-5 bg-light">
+            <div class="container">
+                <!-- Page Header -->
+                <div class="text-center mb-5" data-aos="fade-down">
+                    <h1 class="display-5 fw-bold mb-2">Request a Catering Quote</h1>
+                    <p class="lead text-muted">Fill in your details, choose a package, and customise your menu</p>
+                    <div class="divider-custom mx-auto mb-4">
+                        <div class="divider-custom-line"></div>
+                        <div class="divider-custom-icon"><i class="fas fa-utensils text-theme"></i></div>
+                        <div class="divider-custom-line"></div>
+                    </div>
+                </div>
+
+                <form id="quoteForm">
+                    <div id="formContentArea">
+                        <!-- ======== STEP 1: Basic Details ======== -->
+                        <div class="row justify-content-center mb-5">
+                            <div class="col-lg-8 col-xl-7">
+                                <h4 class="fw-bold mb-4" data-aos="fade-right"><span class="badge bg-theme rounded-circle me-2">1</span> Your Details</h4>
+
+                                <div class="row g-4">
+                                    <!-- Name -->
+                                    <div class="col-md-6 mb-4">
+                                        <label for="name" class="form-label fw-medium">Full Name <span class="text-theme">*</span></label>
+                                        <div class="input-group input-group-lg">
+                                            <span class="input-group-text bg-white"><i class="fas fa-user text-theme"></i></span>
+                                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                                        </div>
+                                    </div>
+
+                                    <!-- Phone -->
+                                    <div class="col-md-6 mb-4">
+                                        <label for="phone" class="form-label fw-medium">Phone Number <span class="text-theme">*</span></label>
+                                        <div class="input-group input-group-lg">
+                                            <span class="input-group-text bg-white"><i class="fas fa-phone text-theme"></i></span>
+                                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="10-digit mobile number" required>
+                                        </div>
+                                    </div>
+
+                                    <!-- Email -->
+                                    <div class="col-md-6 mb-4">
+                                        <label for="email" class="form-label fw-medium">Email Address</label>
+                                        <div class="input-group input-group-lg">
+                                            <span class="input-group-text bg-white"><i class="fas fa-envelope text-theme"></i></span>
+                                            <input type="email" class="form-control" id="email" name="email" placeholder="Email (optional)">
+                                        </div>
+                                    </div>
+
+                                    <!-- Event Date -->
+                                    <div class="col-md-6 mb-4">
+                                        <label for="eventDate" class="form-label fw-medium">Event Date</label>
+                                        <div class="input-group input-group-lg">
+                                            <span class="input-group-text bg-white"><i class="fas fa-calendar-alt text-theme"></i></span>
+                                            <input type="date" class="form-control" id="eventDate" name="eventDate">
+                                        </div>
+                                    </div>
+
+                                    <!-- Event Time -->
+                                    <div class="col-md-6 mb-4">
+                                        <label for="eventTime" class="form-label fw-medium">Event Time</label>
+                                        <div class="input-group input-group-lg">
+                                            <span class="input-group-text bg-white"><i class="fas fa-clock text-theme"></i></span>
+                                            <input type="time" class="form-control" id="eventTime" name="eventTime">
+                                        </div>
+                                    </div>
+
+                                    <!-- Number of Guests -->
+                                    <div class="col-md-6 mb-4">
+                                        <label for="guests" class="form-label fw-medium">Number of Guests</label>
+                                        <div class="input-group input-group-lg">
+                                            <span class="input-group-text bg-white"><i class="fas fa-users text-theme"></i></span>
+                                            <input type="number" class="form-control" id="guests" name="guests" placeholder="e.g. 50" min="1">
+                                        </div>
+                                    </div>
+
+                                    <!-- Event Type -->
+                                    <div class="col-md-6 mb-4">
+                                        <label class="form-label fw-medium">Type of Event</label>
+                                        <div class="d-flex flex-wrap gap-2 mt-1">
+                                            <input type="radio" class="btn-check" name="eventType" id="typePickup" value="Pickup">
+                                            <label class="btn btn-outline-danger rounded-pill" for="typePickup">Pickup</label>
+
+                                            <input type="radio" class="btn-check" name="eventType" id="typeDelivery" value="Delivery">
+                                            <label class="btn btn-outline-danger rounded-pill" for="typeDelivery">Delivery</label>
+
+                                            <input type="radio" class="btn-check" name="eventType" id="typeCatering" value="Live Catering">
+                                            <label class="btn btn-outline-danger rounded-pill" for="typeCatering">Live Catering</label>
+
+                                            <input type="radio" class="btn-check" name="eventType" id="typeOther" value="Other">
+                                            <label class="btn btn-outline-danger rounded-pill" for="typeOther">Other</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <!-- ======== STEP 2: Package Selection ======== -->
+                        <div id="packageSection" class="mb-5">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-10">
+                                    <h4 class="fw-bold mb-4 text-center" data-aos="fade-down"><span class="badge bg-theme rounded-circle me-2">2</span> Choose Your Package</h4>
+                                    <div class="row g-4 justify-content-center">
+                                        <!-- Executive Card -->
+                                        <div class="col-md-6">
+                                            <div class="package-card card border-2 border-light rounded-4 h-100 text-center p-4 position-relative" data-package="executive" style="cursor:pointer;" data-aos="fade-right">
+                                                <span class="package-badge badge bg-success position-absolute top-0 end-0 m-3 d-none">Selected</span>
+                                                <div class="mb-3">
+                                                    <i class="fas fa-star fa-2x text-theme"></i>
+                                                </div>
+                                                <h3 class="fw-bold">Executive</h3>
+                                                <p class="display-6 fw-bold text-theme mb-1">&#8377;399<small class="fs-6 fw-normal text-muted">/person</small></p>
+                                                <p class="text-muted small mb-3">+ GST</p>
+                                                <ul class="list-unstyled text-start mb-0">
+                                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>1 Starter</li>
+                                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>1 Gravy</li>
+                                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>1 Paneer Gravy</li>
+                                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>1 Rice</li>
+                                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>1 Bread</li>
+                                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Raita, Pickle, Salad</li>
+                                                    <li class="mb-0"><i class="fas fa-check text-success me-2"></i>1 Dessert</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <!-- Luxury Card -->
+                                        <div class="col-md-6">
+                                            <div class="package-card card border-2 border-light rounded-4 h-100 text-center p-4 position-relative" data-package="luxury" style="cursor:pointer;" data-aos="fade-left">
+                                                <span class="package-badge badge bg-success position-absolute top-0 end-0 m-3 d-none">Selected</span>
+                                                <div class="mb-3">
+                                                    <i class="fas fa-crown fa-2x text-warning"></i>
+                                                </div>
+                                                <h3 class="fw-bold">Luxury</h3>
+                                                <p class="display-6 fw-bold text-theme mb-1">&#8377;499<small class="fs-6 fw-normal text-muted">/person</small></p>
+                                                <p class="text-muted small mb-3">+ GST</p>
+                                                <ul class="list-unstyled text-start mb-0">
+                                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>1 Welcome Drink</li>
+                                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>2 Starters</li>
+                                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>1 Gravy</li>
+                                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>1 Paneer Gravy</li>
+                                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>1 Rice</li>
+                                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>2 Breads</li>
+                                                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Raita, Pickle, Salad</li>
+                                                    <li class="mb-0"><i class="fas fa-check text-success me-2"></i>2 Desserts</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ======== STEP 3: Menu Customisation ======== -->
+                        <div id="menuSection" class="d-none mb-5">
+                            <hr class="my-4">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-10">
+                                    <h4 class="fw-bold mb-4 text-center" data-aos="fade-down"><span class="badge bg-theme rounded-circle me-2">3</span> Customise Your Menu</h4>
+                                    <div id="menuChoices"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ======== Order Summary ======== -->
+                        <div id="summarySection" class="d-none mb-5">
+                            <hr class="my-4">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <div class="card border-0 shadow-sm rounded-4 p-4" data-aos="fade-up">
+                                        <h5 class="fw-bold mb-3"><i class="fas fa-receipt text-theme me-2"></i>Order Summary</h5>
+                                        <div class="row mb-3">
+                                            <div class="col-sm-4 mb-2">
+                                                <span class="text-muted small">Package</span>
+                                                <p class="fw-semibold mb-0" id="summaryPackageName">—</p>
+                                            </div>
+                                            <div class="col-sm-4 mb-2">
+                                                <span class="text-muted small">Price</span>
+                                                <p class="fw-semibold mb-0" id="summaryPricePerHead">—</p>
+                                            </div>
+                                            <div class="col-sm-4 mb-2">
+                                                <span class="text-muted small">Guests</span>
+                                                <p class="fw-semibold mb-0" id="summaryGuests">Not specified</p>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <span class="text-muted small">Selected Items</span>
+                                            <ul class="list-unstyled mt-1 mb-0" id="summaryItemsList">
+                                                <li class="text-muted">No items selected yet</li>
+                                            </ul>
+                                        </div>
+                                        <div class="border-top pt-3 d-flex justify-content-between align-items-center">
+                                            <span class="fw-bold fs-5">Estimated Total</span>
+                                            <span class="fw-bold fs-5 text-theme" id="summaryEstTotal">—</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ======== Message & Submit ======== -->
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8 col-xl-7">
+                                <div class="mb-4">
+                                    <label for="message" class="form-label fw-medium">Message or Special Requests</label>
+                                    <textarea class="form-control form-control-lg" id="message" name="message" rows="3" placeholder="Any additional details about your event... (optional)"></textarea>
+                                </div>
+                                <div class="d-grid mt-4">
+                                    <button type="submit" class="btn btn-danger btn-lg py-3 fw-semibold">Submit Request</button>
+                                </div>
+                                <p class="text-center text-muted mt-3 small">Your information is secure and will not be shared with third parties.</p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Quick Links Column -->
+                <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="100">
+                    <h5 class="text-uppercase text-theme fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="index.html" class="text-white text-decoration-none">
+                                <i class="fas fa-angle-right me-2 text-theme"></i>Home
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="menu.html" class="text-white text-decoration-none">
+                                <i class="fas fa-angle-right me-2 text-theme"></i>Menu
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="about.html" class="text-white text-decoration-none">
+                                <i class="fas fa-angle-right me-2 text-theme"></i>About Us
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="get-quote.html" class="text-white text-decoration-none">
+                                <i class="fas fa-angle-right me-2 text-theme"></i>Get Quote
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info Column -->
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <h5 class="text-uppercase text-theme fw-bold mb-4">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-3 d-flex">
+                            <i class="fas fa-envelope me-3 text-theme"></i>
+                            <a href="mailto:northynook@gmail.com" class="text-white text-decoration-none">northynook@gmail.com</a>
+                        </li>
+                        <li class="mb-3 d-flex">
+                            <i class="fas fa-phone me-3 text-theme"></i>
+                            <a href="tel:+919837029863" class="text-white text-decoration-none">+91 9837029863</a>
+                        </li>
+                        <li class="d-flex">
+                            <i class="fas fa-map-marker-alt me-3 text-theme mt-1"></i>
+                            <span>Level Up Drive in, Tellapur, Gopanpalle, Hyderabad, Telangana 500046, India</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="text-center mt-4 pt-3 border-top border-secondary">
+                <p class="mb-0">&copy; 2025 NorthyNook. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/menu-data.js"></script>
+    <script src="js/quote-form.js"></script>
+    
+    <script>
+        // Initialize AOS animation library
+        AOS.init({
+            duration: 800,
+            once: false,
+            mirror: true,
+            offset: 100
+        });
+    </script>
+    
+    <!-- Start of OpenWidget (www.openwidget.com) code -->
+<script>
+  window.__ow = window.__ow || {};
+  window.__ow.organizationId = "2957a602-183b-40c6-8f2c-15444f599797";
+  window.__ow.integration_name = "manual_settings";
+  window.__ow.product_name = "openwidget";   
+  ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[OpenWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.openwidget.com/openwidget.js",t.head.appendChild(n)}};!n.__ow.asyncInit&&e.init(),n.OpenWidget=n.OpenWidget||e}(window,document,[].slice))
+</script>
+<noscript>You need to <a href="https://www.openwidget.com/enable-javascript" rel="noopener nofollow">enable JavaScript</a> to use the communication tool powered by <a href="https://www.openwidget.com/" rel="noopener nofollow" target="_blank">OpenWidget</a></noscript>
+<!-- End of OpenWidget code -->
+
+</body>
+</html>

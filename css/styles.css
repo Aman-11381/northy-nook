@@ -443,3 +443,38 @@ footer h5::after {
         height: 250px;
     }
 }
+
+/* Quote Form — Package Cards */
+.package-card {
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.package-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.12) !important;
+}
+
+.package-card.selected {
+    background: rgba(220, 53, 69, 0.04);
+}
+
+/* Quote Form — Menu Option Cards */
+.menu-option-card {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.menu-option-card:hover {
+    border-color: var(--primary-color) !important;
+}
+
+.menu-option-card input[type="radio"],
+.menu-option-card input[type="checkbox"] {
+    flex-shrink: 0;
+}
+
+.menu-category-group + .menu-category-group {
+    border-top: 1px solid #dee2e6;
+    padding-top: 1.5rem;
+}
