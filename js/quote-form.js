@@ -260,8 +260,10 @@ document.addEventListener('DOMContentLoaded', function () {
             formResult.selections[cat.name] = Array.from(checked).map(c => c.value);
         });
 
-        // For now, simulate success (no backend)
-        console.log('Order submitted:', formResult);
+        // Build WhatsApp message and open
+        const whatsappMsg = buildWhatsAppMessage(formResult);
+        const whatsappUrl = `https://wa.me/919837029863?text=${encodeURIComponent(whatsappMsg)}`;
+        window.open(whatsappUrl, '_blank');
         showSuccessMessage();
     });
 
@@ -295,6 +297,40 @@ document.addEventListener('DOMContentLoaded', function () {
         toast.textContent = message;
         toast.classList.remove('d-none');
         setTimeout(() => toast.classList.add('d-none'), 3500);
+    }
+
+    function buildWhatsAppMessage(data) {
+        const pkgData = menuData[data.package];
+        let msg = `*New Catering Order Request*\n\n`;
+        msg += `*Name:* ${data.name}\n`;
+        msg += `*Phone:* ${data.phone}\n`;
+        if (data.email) msg += `*Email:* ${data.email}\n`;
+        if (data.eventDate) msg += `*Event Date:* ${data.eventDate}\n`;
+        if (data.eventTime) msg += `*Event Time:* ${data.eventTime}\n`;
+        if (data.guests) msg += `*Guests:* ${data.guests}\n`;
+        if (data.eventType) msg += `*Event Type:* ${data.eventType}\n`;
+
+        msg += `\n*Package:* ${pkgData.name} (Rs.${pkgData.price}/person + ${pkgData.gstPercent}% GST)\n`;
+
+        if (pkgData.included && pkgData.included.length > 0) {
+            msg += `*Included:* ${pkgData.included.join(', ')}\n`;
+        }
+
+        msg += `\n*Menu Selections:*\n`;
+        for (const [category, items] of Object.entries(data.selections)) {
+            msg += `- ${category}: ${items.join(', ')}\n`;
+        }
+
+        if (data.guests) {
+            const total = pkgData.price * parseInt(data.guests);
+            const gst = Math.round(total * (pkgData.gstPercent / 100));
+            msg += `\n*Estimated Total:* Rs.${(total + gst).toLocaleString('en-IN')} (incl. GST)\n`;
+        }
+
+        const message = document.getElementById('message')?.value.trim();
+        if (message) msg += `\n*Special Requests:* ${message}\n`;
+
+        return msg;
     }
 
     function showSuccessMessage() {
